@@ -3,6 +3,7 @@ import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import useActions from "../hooks/useActions.jsx";
 import { ContactCard } from "../components/ContactCard.jsx";
+import { EditContact } from "./EditContacts.jsx";
 
 export const Home = () => {
   const { store, dispatch } = useGlobalReducer();
