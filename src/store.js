@@ -27,7 +27,7 @@ export default function storeReducer(store, action = {}) {
         ...store,
         todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
       };
-    case "update_contacts": 
+    case "store_get_contacts": 
       return{
         ...store,
         contacts: action.payload
