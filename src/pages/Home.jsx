@@ -31,8 +31,8 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="text-center mt-5">
-      <h1>Contacts</h1>
+    <div className="mt-5">
+      <h1 className="text-center">Contacts</h1>
       {store.contacts.map((contact) => (
         <ContactCard
           name={contact.name}

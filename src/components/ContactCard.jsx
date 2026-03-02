@@ -19,19 +19,24 @@ export const ContactCard = ({ name, phone, email, address, id }) => {
   };
 
   return (
-    <div className="card">
-      <img src="..." className="card-img-top" alt="..." />
-      <div className="card-body">
-        <h5 className="card-title">{name}</h5>
-        <p className="card-text">
-          {email}
-          {address}
-          {phone}
-        </p>
-        <Link to={`/edit-contact/${id}`}>
-          <button className="btn btn-warning">Edit</button>
+    <div className="row d-flex bg-secondary-subtle w-75 mb-2 mx-auto my-auto rounded">
+      <div className="d-flex col-3 p-0 my-auto">
+        {/* {<img className= "" src="https://play-lh.googleusercontent.com/yCnT7efge9GD_v3ceGDg7juMnEVOFgKkI69gky4sCQF3HDzQjzgu7q2OlXVR6E86g-N2" alt="..." />} */}
+        <h1 className="mb-0">IMAGE HERE</h1>
+      </div>
+      <div className=" contactName d-flex col-3 my-auto justify-content-center">
+        <h5 className="name mb-0">{name}</h5>
+      </div>
+      <div className="contactInfo col-4">
+        <p className="contactInfo mb-0">{email} </p>
+        <p className="address mb-0 "> {address} </p>
+        <p className="address mb-0"> {phone} </p>
+      </div>
+      <div className="contactButtons col-2 p-0 my-auto">
+        < Link to={`/edit-contact/${id}`}>
+          <button className="btn btn-warning w-100">Edit</button>
         </Link>
-        <button className="btn btn-danger" onClick={() => deleteContact()}>
+        <button className="btn btn-danger w-100" onClick={() => deleteContact()}>
           Delete Contact
         </button>
       </div>
