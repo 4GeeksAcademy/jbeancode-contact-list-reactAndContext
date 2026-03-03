@@ -15,6 +15,18 @@ export const AddContact = () => {
     phoneInput: "",
   });
 
+    // const handleInputChange = (event) => {
+    //   if (event.key != "Enter") {
+    //     return;
+    //   }
+    //   // event.preventDefault();
+    //   if (inputValues.nameInput === "" || inputValues.phoneInput === ""){
+    //     alert('You need to complete a name & number!');
+    //     return;
+    //   }
+    //   postContact();
+    // };
+
   const postContact = async(event) => {
     event.preventDefault();
     const response = await fetch(
@@ -33,22 +45,22 @@ export const AddContact = () => {
   },
 );
     if(!response.ok) {
-        console.log("error :", respone.status, response.statusText);
+        console.log("error :", response.status, response.statusText);
     }
     const data = await response.json();
     getContacts()
-    Navigate("/");
+    navigate("/");
     return data;
   };
   return (
-    <>
+    <div className="p-3">
       <h1>Add Contact</h1>
-      <form onSubmit={(e) => postContact(e)}>
+      <form onSubmit={postContact}>
         <fieldset>
           <label htmlFor="nameInput">Name</label>
           <input
             type="text"
-            id="nameInput"
+            id="contactNameInput"
             value={inputValues.nameInput}
             className="form-control"
             onChange={(event) =>
@@ -60,7 +72,7 @@ export const AddContact = () => {
           <label htmlFor="nameInput">Address</label>
           <input
             type="text"
-            id="nameInput"
+            id="contactAddressInput"
             value={inputValues.addressInput}
             className="form-control"
             onChange={(event) =>
@@ -75,7 +87,7 @@ export const AddContact = () => {
           <label htmlFor="nameInput">Email</label>
           <input
             type="text"
-            id="nameInput"
+            id="contactEmailInput"
             value={inputValues.emailInput}
             className="form-control"
             onChange={(event) =>
@@ -87,7 +99,7 @@ export const AddContact = () => {
           <label htmlFor="nameInput">Phone</label>
           <input
             type="text"
-            id="nameInput"
+            id="contactPhoneInput"
             value={inputValues.phoneInput}
             className="form-control"
             onChange={(event) =>
@@ -95,15 +107,15 @@ export const AddContact = () => {
             }
           />
         </fieldset>
-        <div>
+        <div className="mt-2">
           <Link to="/">
-            <button className="btn btn-danger">Back to Home</button>
+            <button className="btn btn-danger me-2" type="button" >Back to Home</button>
           </Link>
           <button type="submit" className="btn btn-primary">
             Add Contact
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 };

@@ -21,13 +21,13 @@ export const ContactCard = ({ name, phone, email, address, id }) => {
   return (
     <div className="row d-flex bg-secondary-subtle w-75 mb-2 mx-auto my-auto rounded">
       <div className="d-flex col-3 p-0 my-auto">
-        {/* {<img className= "" src="https://play-lh.googleusercontent.com/yCnT7efge9GD_v3ceGDg7juMnEVOFgKkI69gky4sCQF3HDzQjzgu7q2OlXVR6E86g-N2" alt="..." />} */}
-        <h1 className="mb-0">IMAGE HERE</h1>
+        {<img className= "contactImage mx-auto" src="src/assets/img/Question.png" alt="..." />}
+        {/* <h1 className="mb-0">IMAGE HERE</h1> */}
       </div>
-      <div className=" contactName d-flex col-3 my-auto justify-content-center">
+      <div className=" contactName d-flex col-3 my-auto">
         <h5 className="name mb-0">{name}</h5>
       </div>
-      <div className="contactInfo col-4">
+      <div className="contactInfo col-4 my-auto">
         <p className="contactInfo mb-0">{email} </p>
         <p className="address mb-0 "> {address} </p>
         <p className="address mb-0"> {phone} </p>

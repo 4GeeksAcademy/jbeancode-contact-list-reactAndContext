@@ -57,7 +57,7 @@ export const EditContact = () => {
     return data;
   };
   return (
-    <>
+    <div className="p-3">
       <h1>Edit Contact</h1>
       <form onSubmit={(e) => putContact(e)}>
         <fieldset>
@@ -111,15 +111,15 @@ export const EditContact = () => {
             }
           />
         </fieldset>
-        <div>
+        <div className="mt-2">
           <Link to="/">
-            <button className="btn btn-danger">Back to Home</button>
+            <button className="btn btn-danger me-2">Back to Home</button>
           </Link>
           <button type="submit" className="btn btn-warning">
-            Edit Contact
+            Update
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
