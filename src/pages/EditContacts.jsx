@@ -113,7 +113,7 @@ export const EditContact = () => {
         </fieldset>
         <div className="mt-2">
           <Link to="/">
-            <button className="btn btn-danger me-2">Back to Home</button>
+            <button className="btn btn-danger me-2" type="button" >Back to Home</button>
           </Link>
           <button type="submit" className="btn btn-warning">
             Update

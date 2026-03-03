@@ -21,7 +21,7 @@ export const ContactCard = ({ name, phone, email, address, id }) => {
   return (
     <div className="row d-flex bg-secondary-subtle w-75 mb-2 mx-auto my-auto rounded">
       <div className="d-flex col-3 p-0 my-auto">
-        {<img className= "contactImage mx-auto" src="src/assets/img/Question.png" alt="..." />}
+        {<img className= "contactImage mx-auto rounded-circle" src="src/assets/img/Question.png" alt="..." />}
         {/* <h1 className="mb-0">IMAGE HERE</h1> */}
       </div>
       <div className=" contactName d-flex col-3 my-auto">
